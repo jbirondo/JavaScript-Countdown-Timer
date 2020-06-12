@@ -33,3 +33,9 @@ function displayEndTime(timestamp) {
     endTime.textContent = `Be back at ${hours > 12 ? hours - 12 : hours}:${minutes < 10 ? '0' : ''}${minutes}`
 }
 
+function startTimer(){
+    const seconds = parseInt(this.dataset.time)
+    timer(seconds)
+}
+
+buttons.forEach(button => button.addEventListener('click', startTimer))
